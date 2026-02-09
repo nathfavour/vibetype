@@ -10,6 +10,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 	"github.com/nathfavour/vibetype/internal/engine"
+	"github.com/nathfavour/vibetype/internal/data"
 	"github.com/nathfavour/vibetype/internal/styles"
 )
 
@@ -79,7 +80,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.engine.Pop()
 		case msg.Type == tea.KeyEnter:
 			if m.engine.Finished {
-				m.engine = engine.NewEngine(string(m.engine.TargetText))
+				m.engine = engine.NewEngine(data.GetRandomQuote())
 				return m, tick()
 			}
 		case msg.Type == tea.KeyRunes:
