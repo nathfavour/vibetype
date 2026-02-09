@@ -15,6 +15,7 @@ To build **Vibetype**: The ultimate, cross-platform, zero-latency TUI typing exp
     * **The "Zone" is Sacred:** Any feature that breaks the user's flow state is immediately rejected.
     * **Aesthetics over Data:** Statistics are important, but the *feel* of typing takes precedence.
     * **Single Binary Supremacy:** The final output must be a single, portable executable with zero external dependencies.
+    * **Clean Source Hygiene:** Builds must NEVER be created or reside in the project source code directory. All binaries must reside in `build/`, which is ignored by version control.
 
 ### 2. **Rune (The Core Engineer)**
 * **Role:** Go Backend & Logic Systems
