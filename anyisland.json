@@ -1,0 +1,17 @@
+{
+  "name": "vibetype",
+  "version": "0.1.0",
+  "description": "The ultimate, cross-platform, zero-latency TUI typing experience.",
+  "repository": "github.com/nathfavour/vibetype",
+  "build": {
+    "toolchain": "go",
+    "steps": [
+      "make build"
+    ],
+    "bin": "build/vibetype"
+  },
+  "runtime": {
+    "daemon": false,
+    "pulse": false
+  }
+}
