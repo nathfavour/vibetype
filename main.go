@@ -31,10 +31,7 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m model) View() string {
-	return fmt.Sprintf("
-  %s
-
-", m.content)
+	return fmt.Sprintf("\n  %s\n\n", m.content)
 }
 
 func main() {
